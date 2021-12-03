@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" class="theme-1">
+
+  <form id="calculator" class="calculator" action="">
+    <div class="calculator__header">
+      <h1 class="calculator__h1">calc</h1>
+
+      <fieldset class="calculator__fieldset">
+        <legend class="calculator__legend">THEME</legend>
+
+        <input id="theme-1" class="calculator__input calculator__input-1" type="radio" checked name="themeMode" aria-label="theme 1" value="theme-1">
+        <label for="theme-1" class="calculator__label">1</label>
+
+        <input id="theme-2" class="calculator__input calculator__input-2" type="radio" name="themeMode" aria-label="theme 2" value="theme-2">
+        <label for="theme-2" class="calculator__label">2</label>
+
+        <input id="theme-3" class="calculator__input calculator__input-3" type="radio" name="themeMode" aria-label="theme 3" value="theme-3">
+        <label for="theme-3" class="calculator__label">3</label>
+
+        <div id="circle" class="circle theme1"></div>
+      </fieldset>
+    </div>
+
+    <p id="result">399,981</p>
+
+    <fieldset class="calculator__buttons">
+      <legend class="calculator__legend">Calculator Buttons</legend>
+      <button class="calculator__button">7</button>
+      <button class="calculator__button">8</button>
+      <button class="calculator__button">9</button>
+      <button class="calculator__button calculator__button-2">DEL</button>
+      <button class="calculator__button">4</button>
+      <button class="calculator__button">5</button>
+      <button class="calculator__button">6</button>
+      <button class="calculator__button">+</button>
+      <button class="calculator__button">1</button>
+      <button class="calculator__button">2</button>
+      <button class="calculator__button">3</button>
+      <button class="calculator__button">-</button>
+      <button class="calculator__button">.</button>
+      <button class="calculator__button">0</button>
+      <button class="calculator__button">/</button>
+      <button class="calculator__button">x</button>
+      <button class="calculator__button calculator__button-2">RESET</button>
+      <button class="calculator__button calculator__button-3">=</button>
+    </fieldset>
+
+  </form>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://sergio-ivan-melgarejo.github.io/Portafolio/">Sergio M</a>.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

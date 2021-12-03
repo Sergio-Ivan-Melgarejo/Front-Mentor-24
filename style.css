@@ -1,0 +1,291 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-1);
+    color: var(--text-color);
+    transition: color 350ms, background-color 350ms;
+}
+
+.theme-1{
+    /* #### Backgrounds */
+    --background-1: hsl(222, 26%, 31%); /* (main background) */
+    --background-2: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+    --background-3: hsl(224, 36%, 15%); /* (screen background) */
+
+/* #### Keys */
+    --key1-1: hsl(225, 21%, 49%); /* (key background) */
+    --key1-2: hsl(224, 28%, 35%); /* (key shadow) */
+
+    --key2-1: hsl(6, 63%, 50%); /* (key background, toggle) */
+    --key2-2: hsl(6, 70%, 34%); /* (key shadow) */
+
+    --key3-1: hsl(30, 25%, 89%); /* (key background) */
+    --key3-2: hsl(28, 16%, 65%); /* (key shadow) */
+
+/* #### Text */
+    --key-color: hsl(221, 14%, 31%);
+    --text-color: rgb(255, 255, 255); /* (text) */
+}
+
+.theme-2{
+/* #### Backgrounds */
+    --background-1: hsl(0, 0%, 90%); /* (main background) */
+    --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+    --background-3: hsl(0, 0%, 93%); /* (screen background) */
+
+/* #### Keys */
+    --key1-1: hsl(185, 42%, 37%); /* (key background) */
+    --key1-2: hsl(185, 58%, 25%); /* (key shadow) */
+
+    --key2-1: hsl(25, 98%, 40%); /* (key background, toggle) */
+    --key2-2: hsl(25, 99%, 27%); /* (key shadow) */
+
+    --key3-1: hsl(45, 7%, 89%); /* (key background) */
+    --key3-2: hsl(35, 11%, 61%); /* (key shadow) */
+
+/* #### Text */
+    --key-color-2: rgb(255, 255, 255); /* (text) */
+    --text-color: hsl(60, 10%, 19%); /*  */
+}
+
+.theme-3{
+/* #### Backgrounds */
+    --background-1: hsl(268, 75%, 9%); /* (main background) */
+    --background-2: hsl(268, 71%, 12%); /* (toggle background, keypad background, screen background) */
+
+/* #### Keys */
+    --key1-1: hsl(281, 89%, 26%); /* (key background) */
+    --key1-2: hsl(285, 91%, 52%); /* (key shadow) */
+
+    --key2-1: hsl(176, 100%, 44%); /* (key background, toggle) */
+    --key2-2: hsl(177, 92%, 70%); /* (key shadow) */
+
+    --key3-1: hsl(268, 47%, 21%); /* (key background) */
+    --key3-2: hsl(290, 70%, 36%); /* (key shadow) */ 
+
+/* #### Text */
+    --text-color: hsla(52, 100%, 62%, 0.959);
+    --text-color-2: hsl(198, 20%, 13%);
+    --text-color-3: rgb(255, 255, 255); /* (text) */
+}
+
+.calculator{
+    max-width: 500px;
+    width: 100%;
+    min-width: 375px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 4em 1em 1em;
+}
+
+.calculator__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+/* * change themes ----------------------------- */
+  
+.calculator__fieldset{
+    align-items: center;
+    border: none;
+    display: flex;
+    margin-top: 1rem;
+    padding: 0;
+    position: relative;
+    background-color: var(--background-2);
+    padding: 4px;
+    border-radius: 50px;
+    gap: 1;
+    width: 5em;
+    height: 1.5em;
+}
+
+.calculator__fieldset .calculator__legend{
+    position: absolute;
+    left: -2em;
+    transform: translateX(-100%);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+  
+.calculator__label{
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    font-size: .8em;
+    transition: color 350ms;
+}
+
+.calculator__label:hover{
+    color: var(--key2-1);
+}
+
+.calculator__label:nth-child(3){
+    left: 8px;
+}
+
+.calculator__label:nth-child(5){
+    left: 2.7em;
+}
+
+.calculator__label:nth-child(7){
+    left: 5em;
+}
+
+.calculator__input{
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 10;
+}
+
+.calculator__input-1{
+    left: 4px;
+}
+
+.calculator__input-2{
+    left: 2em;
+}
+
+.calculator__input-3{
+    right: 4px;
+}
+
+input[type="radio"]{
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+}
+
+.circle{
+    width: 1em;
+    height: 1em;
+    background-color: var(--key2-1);
+    border-radius: 50%;
+    transition: margin 350ms;
+    margin: 0;
+}
+
+.circle.theme1{
+    margin: 0 0em 0 0;
+}
+
+.circle.theme2{
+    margin: 0 0 0 1.7em;
+}
+
+.circle.theme3{
+    margin: 0 0 0 3.5em;
+}
+
+#result{
+    background-color: var(--background-3);
+    text-align: right;
+    padding: 32px;
+    font-size: 32px;
+    border-radius: 15px;
+}
+
+.calculator__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 2em;
+    border: none;
+    box-sizing: border-box;
+    background-color: var(--background-2);
+    border-radius: 10px;
+}
+
+.calculator__buttons .calculator__legend{
+    opacity: 0;
+}
+
+.calculator__button{
+    width: 20%;
+    flex-grow: 1;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 0.25em 0;
+    border-radius: 10px;
+    color: var(--key-color);
+    background-color: var(--key3-1);
+    border: none;
+    border-bottom: 4px solid var(--key3-2);
+    border-top: 4px solid transparent;
+    height: 60px;
+    cursor: pointer;
+    font-family: 'Spartan', sans-serif;
+}
+
+.theme-3 .calculator__button{
+    color: var(--text-color);
+}
+
+.calculator__button:focus{
+    border-top: 4px solid var(--background-2);
+    border-bottom: none;
+}
+
+.calculator__button-2{
+    background-color: var(--key1-1);
+    color: var(--text-color);
+    font-size: 20px;
+    padding: .79em 0;
+    border-bottom: 4px solid var(--key1-2);
+}
+
+.theme-2 .calculator__button-2{
+    color: var(--background-3);
+}
+
+.theme-3 .calculator__button-2{
+    color: var(--text-color-3);
+}
+
+.calculator__button-3{
+    background-color: var(--key2-1);
+    color: var(--text-color);
+    border-bottom: 4px solid var(--key2-2);
+}
+
+.theme-2 .calculator__button-3{
+    color: var(--background-3);
+}
+
+.theme-3 .calculator__button-3{
+    color: var(--text-color-2);
+}
+
+/* * link ----------------------------------- */
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    top: 1em;
+    opacity: .8;
+}
+
+.attribution a{ 
+    color: var(--key2-2); 
+    transition: color 350ms;
+}
+
+.attribution a:hover{ 
+    color: var(--key2-1); 
+}
