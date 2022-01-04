@@ -17,7 +17,7 @@
 <body id="body" class="theme-1">
 
   <form id="calculator" class="calculator" action="">
-    <div class="calculator__header">
+    <header class="calculator__header">
       <h1 class="calculator__h1">calc</h1>
 
       <fieldset class="calculator__fieldset">
@@ -34,37 +34,45 @@
 
         <div id="circle" class="circle theme1"></div>
       </fieldset>
-    </div>
+    </header>
 
-    <p id="result">399,981</p>
+    <fieldset class="calculator__result">
+      <legend class="result__legend">Result</legend>
+      <input class="result__input" id="result" type="text" autocomplete="off" value="" readonly></input>
+    </fieldset>
 
     <fieldset class="calculator__buttons">
       <legend class="calculator__legend">Calculator Buttons</legend>
-      <button class="calculator__button">7</button>
-      <button class="calculator__button">8</button>
-      <button class="calculator__button">9</button>
-      <button class="calculator__button calculator__button-2">DEL</button>
-      <button class="calculator__button">4</button>
-      <button class="calculator__button">5</button>
-      <button class="calculator__button">6</button>
-      <button class="calculator__button">+</button>
-      <button class="calculator__button">1</button>
-      <button class="calculator__button">2</button>
-      <button class="calculator__button">3</button>
-      <button class="calculator__button">-</button>
-      <button class="calculator__button">.</button>
-      <button class="calculator__button">0</button>
-      <button class="calculator__button">/</button>
-      <button class="calculator__button">x</button>
-      <button class="calculator__button calculator__button-2">RESET</button>
-      <button class="calculator__button calculator__button-3">=</button>
+
+      <button class="calculator__button" value="7">7</button>
+      <button class="calculator__button" value="8">8</button>
+      <button class="calculator__button" value="9">9</button>
+      <button class="calculator__button calculator__button-2" value="delete">DEL</button>
+
+      <button class="calculator__button" value="4">4</button>
+      <button class="calculator__button" value="5">5</button>
+      <button class="calculator__button" value="6">6</button>
+      <button class="calculator__button" value="+">+</button>
+
+      <button class="calculator__button" value="1">1</button>
+      <button class="calculator__button" value="2">2</button>
+      <button class="calculator__button" value="3">3</button>
+      <button class="calculator__button" value="-">-</button>
+
+      <button class="calculator__button" value=",">.</button>
+      <button class="calculator__button" value="0">0</button>
+      <button class="calculator__button" value="/">/</button>
+      <button class="calculator__button" value="*">x</button>
+
+      <button class="calculator__button calculator__button-2" value="reset">RESET</button>
+      <button class="calculator__button calculator__button-3" value="=">=</button>
     </fieldset>
 
   </form>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://sergio-ivan-melgarejo.github.io/Portafolio/">Sergio M</a>.
+    Coded by <a href="https://sergio-ivan-melgarejo.github.io/Portafolio/"  target="_blank">Sergio M</a>.
   </footer>
 
   <script src="script.js"></script>
